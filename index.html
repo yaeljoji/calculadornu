@@ -1,0 +1,369 @@
+﻿<!--Autor: Sergio Yael Massieu -> 24-Mayo-2024-->
+<!--Instagram: @is.leay -> Facebook: /is.leay -> Github: yaeljoji-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!--FAVICONS-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+
+  <!-- COMMON TAGS -->
+  <title>Calculador de Rendimientos - NU México</title>
+  <!-- Search Engine -->
+  <meta name="description"
+    content="Con esta herramienta puedes saber cuantos rendimientos podrías generar diariamente o por cierta cantidad de días. ¡Totalmente Gratis!">
+  <meta name="image" content="assets/img/nubanner.png">
+  <!-- Schema.org for Google -->
+  <meta itemprop="name" content="Calculador de Rendimientos - NU México">
+  <meta itemprop="description"
+    content="Con esta herramienta puedes saber cuantos rendimientos podrías generar diariamente o por cierta cantidad de días. ¡Totalmente Gratis!">
+  <meta itemprop="image" content="assets/img/nubanner.png">
+  <!-- Open Graph general (Facebook, Pinterest & LinkedIn) -->
+  <meta property="og:title" content="Calculador de Rendimientos - NU México">
+  <meta property="og:description" content="Conoce cuantos rendimientos puedes generar en NU diariamente.">
+  <meta property="og:image" content="assets/img/nubanner.png">
+  <meta property="og:url" content="https://calculadornu.pages.dev/">
+  <meta property="og:site_name" content="Calculador de Rendimientos - NU México">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:type" content="website">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:title" content="Calculador de Rendimientos - NU México">
+  <meta property="twitter:description"
+    content="Con esta herramienta puedes saber cuantos rendimientos podrías generar diariamente o por cierta cantidad de días.">
+  <meta property="twitter:image:src" content="assets/img/nubanner.png">
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700" />
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/brands.min.css">
+  <link rel="stylesheet" href="assets/css/solid.min.css">
+  <!-- Material Kit CSS -->
+  <link href="assets/css/material-kit.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar bg-primary navbar-expand-lg">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="#">
+          <div class="logo-image">
+            <img src="assets/img/nusita.png" class="img-fluid"> <span class="font-weight-bold">Calculador NU</span>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="https://www.facebook.com/groups/1376276346121601" target="_blank"
+              class="nav-link font-weight-bold">
+              <i class="fa-brands fa-facebook"></i> GRUPO DE FACEBOOK AYUDA NU 🇲🇽
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <h2 class="title text-center font-weight-bold">¿Cuánto me da <img src="assets/img/nusito1.png" alt="" width="46"
+        height="25"> de rendimientos?</h2>
+    <p class="h6 text-center mb-4">Actualizado en <span class="text-primary font-weight-bold" id="fecha"></span></p>
+    <div class="col ml-auto mr-auto mb-4" id="divErrores" style="display: none;">
+      <div class="alert alert-danger" role="alert">
+        <span class="font-weight-bold">¡ERROR! </span><span id="errores" class="font-weight-bold"></span>
+      </div>
+    </div>
+    <div class="row">
+      <!--BASICO-->
+      <div class="col-md-4 ml-auto mr-auto">
+        <form class="form" method="" action="" id="formBasica">
+          <div class="card card-login card-hidden">
+            <div class="card-header card-header-success text-center">
+              <h4 class="card-title card-category card-category-social text-white"><i
+                  class="fa-solid fa-calendar-day"></i> DIARIO</h4>
+            </div>
+            <div class="card-body ">
+              <p class="card-description text-center font-weight-bold">Selecciona tu tasa:</p>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-percent"></i>
+                  </span>
+                </div>
+                <select class="form-control form-control-sm selectpicker" data-style="btn btn-link font-weight-bold"
+                  data-tasas>
+                  <option value="15" selected>15% (Cajita Congelada)</option>
+                  <option value="14.60">14.60% (Cajita Congelada)</option>
+                  <option value="14.50" selected>14.50% (Normal)</option>
+                  <option value="9">9% (Normal)</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-sack-dollar"></i>
+                  </span>
+                </div>
+                <input type="number" class="form-control" placeholder="Cantidad" id="cantidadBasica" required>
+              </div>
+            </div>
+            <div class="card-footer justify-content-center">
+              <button type="submit" class="btn btn-info font-weight-bold" id="calcularBasica"><i
+                  class="fa-solid fa-circle-check fa-lg"></i> Calcular</button>
+            </div>
+          </div>
+          <div class="card bg-info mt-1" id="divBasico" style="display: none;">
+            <div class="card-body">
+              <h4 class="card-category card-category-social text-center font-weight-bold"><i
+                  class="fa-solid fa-clipboard-check"></i> RESULTADOS
+              </h4>
+              <h5 class="card-title">
+                Tus rendimientos diarios serían de: <span id="resultadosBasicos"></span>
+              </h5>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--AVANZADO-->
+      <div class="col-md-4 ml-auto mr-auto">
+        <form class="form" method="" action="" id="formAvanzada">
+          <div class="card card-login card-hidden">
+            <div class="card-header card-header-danger text-center">
+              <h4 class="card-title card-category card-category-social text-white"><i
+                  class="fa-regular fa-calendar"></i> A PLAZOS</h4>
+            </div>
+            <div class="card-body ">
+              <p class="card-description text-center font-weight-bold">Selecciona tu tasa:</p>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-percent"></i>
+                  </span>
+                </div>
+                <select class="form-control form-control-sm selectpicker" data-style="btn btn-link font-weight-bold"
+                  data-tasas>
+                  <option value="15">15% (Cajita Congelada)</option>
+                  <option value="14.60">14.60% (Cajita Congelada)</option>
+                  <option value="14.50" selected>14.50% (Normal)</option>
+                  <option value="9">9% (Normal)</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-sack-dollar"></i>
+                  </span>
+                </div>
+                <input type="number" class="form-control" placeholder="Cantidad" id="cantidadAvanzada" required>
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </span>
+                </div>
+                <input type="number" class="form-control" placeholder="Días" id="dias" required>
+              </div>
+            </div>
+            <div class="card-footer justify-content-center">
+              <button type="submit" class="btn btn-info font-weight-bold" id="calcularAvanzada"><i
+                  class="fa-solid fa-circle-check fa-lg"></i> Calcular</button>
+            </div>
+          </div>
+          <div class="card bg-info" id="divAvanzado" style="display: none;">
+            <div class="card-body">
+              <h4 class="card-category card-category-social text-center font-weight-bold"><i
+                  class="fa-solid fa-clipboard-check"></i> RESULTADOS
+              </h4>
+              <h5 class="card-title">
+                Tus rendimientos en <span id="diasUsuario"></span> serían de: <span id="resultadosAvanzados"></span>
+              </h5>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 ml-auto mr-auto">
+        <div class="alert alert-warning" role="alert">
+          Esta herramienta <span class="font-weight-bold">no es oficial de NU.</span> Está creada con el fin de ayudar a
+          los usuarios.<span class="font-weight-bold"> Nunca recopilará ni solicitará tus datos personales.</span>
+        </div>
+      </div>
+    </div>
+    <!--PREGUNTAS-->
+    <div class="row">
+      <div class="col-md-10 ml-auto mr-auto">
+        <h2 class="title text-center font-weight-bold">Preguntas:</h2>
+        <div class="card">
+          <div class="card-body">
+            <div id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse">
+              <div class="card card-plain">
+                <div class="card-header" role="tab" id="headingOne">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#unop" aria-expanded="false"
+                    aria-controls="unop">
+                    ¿Cuál es la fórmula con la que se obtienen los rendimientos?
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                </div>
+
+                <div id="unop" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="card-body">
+                    <span class="font-weight-bold">Respuesta rápida: </span>$saldo en cajita * 15%/ 360.
+                    <p class="font-weight-bold">Contexto:</p>
+                    <p>Se calcula con usando el dinero disponible de tu Cajita multiplicado por (Tasa de interés anual
+                      dividido por días del año).</p>
+                    <p>Es decir, el dinero disponible de tu Cajita multiplicado por la tasa de interés. Suponiendo que
+                      es del 15%: (15%/360) = Rendimiento diario pagado.</p>
+                    <span class="font-weight-bold">Suponiendo que tienes $10,000, el cálculo sería: ($10,000 * 15%/ 360)
+                      = $4.16 por día.</span>
+                    <p>La herramienta te da la oportunidad de elegir alguna de las tasas que actualmente ofrece NU. Van
+                      desde el 15% (Para cajitas congeladas) al 14.75%, 14.50% y 9% en saldo a la vista de las cajitas
+                      normales.</p>
+                    <p>Calculamos 360 días del año, ya que por regulación se toma en cuenta 360 en lugar de 365 días.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-plain">
+                <div class="card-header" role="tab" id="headingThree">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#cuatrop"
+                    aria-expanded="false" aria-controls="cuatrop">
+                    ¿Cuánto es el límite a calcular y a cuánto tiempo?
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                </div>
+                <div id="cuatrop" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="card-body">
+                    Esta herramienta te permite calcular hasta 5 millones de pesos ($5,000,000). Y el tiempo máximo a
+                    calcular es de 1825 días (5 años).
+                  </div>
+                </div>
+              </div>
+              <div class="card card-plain">
+                <div class="card-header" role="tab" id="headingTwo">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#dop" aria-expanded="false"
+                    aria-controls="dop">
+                    ¿Esta página recopila mis datos?
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                </div>
+                <div id="dop" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="card-body">
+                    No, esta página lo único que te solicita es la cantidad a invertir en NU. Al ser una página web
+                    éstatica, ningún dato personal se manda a ningún servidor, ya que no hay servidores. Además, la
+                    página es de código abierto, por lo que cualquier persona puede verlo y verificar que no es dañino.
+                  </div>
+                </div>
+              </div>
+              <div class="card card-plain">
+                <div class="card-header" role="tab" id="headingThree">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#trep"
+                    aria-expanded="false" aria-controls="trep">
+                    ¿Porqué es gratis?
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                </div>
+                <div id="trep" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="card-body">
+                    Aportar mi granito de arena con mis conocimientos de programación para mejorar la comunidad de NU me
+                    llena de satisfacción. Y al no tener servidores que mantengan la página, no hay ningún gasto.
+                    Siempre será gratis y sin publicidad.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FIN PREGUNTAS-->
+  </div>
+  <div class="social-line social-line-black text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <h4 class="title text-white">¡Comparte esta página y ayuda a otros <span class="text-primary">NULOVERS</span>!
+          </h4>
+        </div>
+        <a href="https://twitter.com/intent/tweet?original_referer=https://calculadornu.pages.dev/&text=Mira%20c%C3%B3mo%20calcular%20tus%20rendimientos%20NU&url=https://calculadornu.pages.dev/"
+          class="btn btn-twitter btn-round" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i> Twitter
+        </a>
+        <a href="https://www.facebook.com/sharer.php?u=https://calculadornu.pages.dev/"
+          class="btn btn-facebook btn-round" target="_blank">
+          <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+        <a href="whatsapp://send/?text=https://calculadornu.pages.dev/" class="btn btn-success btn-round"
+          target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://t.me/share/url?url=https%3A%2F%2Fcalculadornu.pages.dev%2F&text=Mira%20como%20calcular%20tus%20rendimientos%20NU"
+          class="btn btn-behance btn-round" target="_blank">
+          <i class="fa-brands fa-telegram"></i> Telegram
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer class="footer footer-black">
+    <div class="container">
+      <a class="footer-brand text-white">Hecho por Yael Massieu</a>
+      <ul class="pull-center">
+        <li>
+          <a href="https://www.facebook.com/groups/1376276346121601" target="_blank">
+            <i class="fa-brands fa-facebook"></i> GRUPO DE FACEBOOK AYUDA NU 🇲🇽
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/is.leay" target="_blank">
+            <i class="fa-solid fa-address-card"></i> ¿Bugs? Contactame
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/yaeljoji/calculadornu" target="_blank">
+            <i class="fa-brands fa-github"></i> Código Fuente (Github)
+          </a>
+        </li>
+      </ul>
+      <ul class="social-buttons float-right">
+        <li>
+          <a href="https://www.facebook.com/is.leay/" target="_blank" class="btn btn-just-icon btn-link">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/is.leay" target="_blank" class="btn btn-just-icon btn-link">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="assets/js/plugins/bootstrap-selectpicker.js" type="text/javascript"></script>
+  <script src="assets/js/material-kit.min.js" type="text/javascript"></script>
+  <script src="assets/js/global.min.js"></script>
+  <script src="assets/js/funciones.min.js"></script>
+  <script src="assets/js/calculo.min.js"></script>
+</body>
+
+</html>
