@@ -9,9 +9,9 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!--FAVICONS-->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+  <link rel="icon" href="assets/img/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="assets/img/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 
   <!-- COMMON TAGS -->
   <title>Calculador de Rendimientos - NU México</title>
@@ -43,7 +43,7 @@
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700" />
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/brands.min.css">
-  <link rel="stylesheet" href="assets/css/solid.min.css">
+  <link rel="stylesheet" href="assets/css/duotone.min.css">
   <link rel="stylesheet" href="assets/css/custom.min.css">
   <!-- Material Kit CSS -->
   <link href="assets/css/material-kit.min.css" rel="stylesheet" />
@@ -56,7 +56,7 @@
       <div class="navbar-translate">
         <a class="navbar-brand" href="#">
           <div class="logo-image">
-            <img src="assets/img/nusita.png" class="img-fluid"> <span class="font-weight-bold">Calculador NU</span>
+            <i class="fa-duotone fa-calculator-simple fa-lg"></i> <span class="font-weight-bold">Calculador NU</span>
           </div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
@@ -80,8 +80,7 @@
     </div>
   </header>
   <div class="container">
-    <h2 class="title text-center font-weight-bold">¿Cuánto me da <img src="assets/img/nusito1.png" alt="" width="46"
-        height="25"> de rendimientos?</h2>
+    <h2 class="title text-center font-weight-bold">¿Cuánto me da <span class="font-weight-bold colornu">NU</span> de rendimientos?</h2>
     <p class="h6 text-center mb-4">Actualizado en <span class="text-primary font-weight-bold" id="fecha"></span></p>
     <div class="col ml-auto mr-auto mb-4" id="divErrores" style="display: none;">
       <div class="alert alert-danger" role="alert">
@@ -95,14 +94,14 @@
           <div class="card card-login card-hidden">
             <div class="card-header card-header-success text-center">
               <h4 class="card-title card-category card-category-social text-white"><i
-                  class="fa-solid fa-calendar-day"></i> DIARIO</h4>
+                  class="fa-duotone fa-calendar-day"></i> DIARIO</h4>
             </div>
             <div class="card-body ">
               <p class="card-description text-center font-weight-bold">Selecciona tu tasa:</p>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="fa-solid fa-percent"></i>
+                    <i class="fa-duotone fa-badge-percent"></i>
                   </span>
                 </div>
                 <select class="form-control form-control-sm selectpicker" data-style="btn btn-link font-weight-bold"
@@ -116,7 +115,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="fa-solid fa-sack-dollar"></i>
+                    <i class="fa-duotone fa-sack-dollar"></i>
                   </span>
                 </div>
                 <input type="number" class="form-control" placeholder="Cantidad" id="cantidadBasica" required>
@@ -124,13 +123,13 @@
             </div>
             <div class="card-footer justify-content-center">
               <button type="submit" class="btn btn-info font-weight-bold" id="calcularBasica"><i
-                  class="fa-solid fa-circle-check fa-lg"></i> Calcular</button>
+                  class="fa-duotone fa-badge-check fa-lg"></i> Calcular</button>
             </div>
           </div>
           <div class="card bg-info mt-1" id="divBasico" style="display: none;">
             <div class="card-body">
               <h4 class="card-category card-category-social text-center font-weight-bold"><i
-                  class="fa-solid fa-clipboard-check"></i> RESULTADOS
+                  class="fa-duotone fa-clipboard-check"></i> RESULTADOS
               </h4>
               <h5 class="card-title">
                 Tus rendimientos diarios serían de: <span id="resultadosBasicos"></span>
@@ -144,15 +143,14 @@
         <form class="form" method="" action="" id="formAvanzada">
           <div class="card card-login card-hidden">
             <div class="card-header card-header-danger text-center">
-              <h4 class="card-title card-category card-category-social text-white"><i
-                  class="fa-regular fa-calendar"></i> A PLAZOS</h4>
+              <h4 class="card-title card-category card-category-social text-white"><i class="fa-duotone fa-calendar-range"></i></i> A PLAZOS</h4>
             </div>
             <div class="card-body ">
               <p class="card-description text-center font-weight-bold">Selecciona tu tasa:</p>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="fa-solid fa-percent"></i>
+                    <i class="fa-duotone fa-badge-percent"></i>
                   </span>
                 </div>
                 <select class="form-control form-control-sm selectpicker" data-style="btn btn-link font-weight-bold"
@@ -166,7 +164,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="fa-solid fa-sack-dollar"></i>
+                    <i class="fa-duotone fa-sack-dollar"></i>
                   </span>
                 </div>
                 <input type="number" class="form-control" placeholder="Cantidad" id="cantidadAvanzada" required>
@@ -174,7 +172,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="fa-solid fa-calendar-days"></i>
+                    <i class="fa-duotone fa-calendar-days"></i>
                   </span>
                 </div>
                 <input type="number" class="form-control" placeholder="Días" id="dias" required>
@@ -182,13 +180,13 @@
             </div>
             <div class="card-footer justify-content-center">
               <button type="submit" class="btn btn-info font-weight-bold" id="calcularAvanzada"><i
-                  class="fa-solid fa-circle-check fa-lg"></i> Calcular</button>
+                  class="fa-duotone fa-badge-check fa-lg"></i> Calcular</button>
             </div>
           </div>
           <div class="card bg-info" id="divAvanzado" style="display: none;">
             <div class="card-body">
               <h4 class="card-category card-category-social text-center font-weight-bold"><i
-                  class="fa-solid fa-clipboard-check"></i> RESULTADOS
+                  class="fa-duotone fa-clipboard-check"></i> RESULTADOS
               </h4>
               <h5 class="card-title">
                 Tus rendimientos en <span id="diasUsuario"></span> serían de: <span id="resultadosAvanzados"></span>
@@ -198,16 +196,16 @@
         </form>
       </div>
       <div class="col-md-6 ml-auto mr-auto">
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-warning" role="alert"><i class="fa-duotone fa-triangle-exclamation"></i>
           <span class="font-weight-bold">Esta herramienta NO es oficial ni está relacionada con NU México.</span> Está creada con el fin de ayudar a
-          los usuarios.<span class="font-weight-bold"> Nunca recopilará ni solicitará tus datos personales.</span>
+          los usuarios.<span class="font-weight-bold"> Nunca recopilará ni solicitará tus datos personales<i class="fa-duotone fa-triangle-exclamation"></i></span>
         </div>
       </div>
     </div>
     <!--PREGUNTAS-->
     <div class="row">
       <div class="col-md-10 ml-auto mr-auto">
-        <h2 class="title text-center font-weight-bold">Preguntas:</h2>
+        <h2 class="title text-center font-weight-bold"><i class="fa-duotone fa-comments-question-check"></i> Preguntas:</h2>
         <div class="card">
           <div class="card-body">
             <div id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse">
@@ -217,7 +215,7 @@
                     aria-controls="unop">
                     ¿Cuál es la fórmula con la que se obtienen los rendimientos?
 
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-duotone fa-chevron-down"></i>
                   </a>
                 </div>
 
@@ -245,7 +243,7 @@
                     aria-expanded="false" aria-controls="cuatrop">
                     ¿Cuánto es el límite a calcular y a cuánto tiempo?
 
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-duotone fa-chevron-down"></i>
                   </a>
                 </div>
                 <div id="cuatrop" class="collapse" role="tabpanel" aria-labelledby="headingThree">
@@ -261,7 +259,7 @@
                     aria-controls="dop">
                     ¿Esta página recopila mis datos?
 
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-duotone fa-chevron-down"></i>
                   </a>
                 </div>
                 <div id="dop" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
@@ -278,7 +276,7 @@
                     aria-expanded="false" aria-controls="trep">
                     ¿Porqué es gratis?
 
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-duotone fa-chevron-down"></i>
                   </a>
                 </div>
                 <div id="trep" class="collapse" role="tabpanel" aria-labelledby="headingThree">
@@ -300,7 +298,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-12">
-          <h4 class="title text-white">¡Comparte esta página y ayuda a otros <span class="text-primary">NULOVERS</span>!
+          <h4 class="title text-white"><i class="fa-duotone fa-share"></i> ¡Comparte esta página y ayuda a otros <span class="text-primary">NULOVERS</span>!
           </h4>
         </div>
         <a href="https://twitter.com/intent/tweet?original_referer=https://rendimientosnu.pages.dev/&text=Mira%20c%C3%B3mo%20calcular%20tus%20rendimientos%20NU&url=https://rendimientosnu.pages.dev/"
@@ -333,7 +331,7 @@
         </li>
         <li>
           <a href="mailto:yaeljoji@proton.me">
-            <i class="fa-solid fa-address-card"></i> ¿Bugs? Contactame: yaeljoji@proton.me
+            <i class="fa-duotone fa-address-card"></i> ¿Bugs? Contactame: yaeljoji@proton.me
           </a>
         </li>
         <li>
