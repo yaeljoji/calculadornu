@@ -1,5 +1,5 @@
 ﻿# CalculadorNu 3.0!
-![enter image description here](https://i.ibb.co/hf1MxTv/nu3-0.png)
+![enter image description here](https://i.ibb.co/N91HnGk/sinlogoss.png)
 
 Mi nombre es **Sergio Yael**. Creador de CalculadorNu, decidí hacer público el código para dar mayor confianza a las personas que usan esta herramienta y permitir a otros desarrolladores a ayudarme a corregir errores.
 
